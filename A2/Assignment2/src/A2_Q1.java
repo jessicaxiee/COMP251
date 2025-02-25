@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class A2_Q1 {
-
 	private static final int ROWS = 5;
 	private static final int COLS = 9;
 	private static final int[][] DIRECTIONS = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
@@ -23,15 +22,15 @@ public class A2_Q1 {
 	}
 
 	public static int[] backtracking(String[][] board, int ballsLeft, int moves, int minBalls, int minMoves) {
-		//Base case
-		if (ballsLeft == 1) {        //final leaf
-			return new int[]{minBalls, minMoves};
-		}
-
 		//Comparing current solution with best solution
 		if (ballsLeft < minBalls || (ballsLeft == minBalls && moves < minMoves)) {
 			minBalls = ballsLeft;
 			minMoves = moves;
+		}
+
+		//Base case
+		if (ballsLeft == 1) {        //final leaf
+			return new int[]{minBalls, minMoves};
 		}
 
 		//Iterating through the cells
