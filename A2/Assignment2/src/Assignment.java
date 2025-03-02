@@ -19,9 +19,9 @@ class Assignment implements Comparator<Assignment>{
 	 */
 	@Override
 	public int compare(Assignment a1, Assignment a2) {
-		// TODO Implement this
-		
-		
-		return 0;
+		 if (a1.weight != a2.weight) {
+			 return Integer.compare(a2.weight, a1.weight);	//sort in weigth décroissant
+		 }
+	return Integer.compare(a1.deadline, a2.deadline); //sort by deadline increasing
 	}
 }
