@@ -6,4 +6,5 @@ public class A3Q2 {
         String[] answer = new String[cities.length];
         return answer;
     }
+
 }
